@@ -440,7 +440,7 @@ input {
   position: relative;
   z-index: 2;
 
-  width: 920px;
+  width: 100%;
   max-width: none;
   height: auto;
 
