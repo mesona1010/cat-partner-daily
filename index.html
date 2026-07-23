@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>貓伴日常</title>
+
+<link rel="icon" type="image/png" href="images/cat-icon.png">
+
+  <!-- Google 字體 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- 連結 CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- 導覽列 -->
+  <header class="header">
+    <div class="navigation">
+
+      <!-- 左側 Logo -->
+      <a href="#" class="logo">
+        <div class="logo-image">
+  <img
+    src="images/cat-icon.png"
+    alt="貓伴日常LOGO"
+  >
+</div>
+
+        <div class="logo-text">
+          <strong>貓伴日常</strong>
+          <span>陪伴愛貓的每一天 ♡</span>
+        </div>
+      </a>
+
+      <!-- 中間選單 -->
+      <nav class="nav-links">
+        <a href="disease.html">疾病知識</a>
+        <a href="food.html">飲食與罐頭</a>
+        <a href="hospital.html">住院照護</a>
+        <a href="grief.html">悲傷支持</a>
+        <a href="about.html">關於貓伴日常</a>
+      </nav>
+
+      <!-- 右側搜尋框 -->
+      <div class="search-box">
+
+  <input
+    type="search"
+    placeholder="搜尋功能開發中..."
+    disabled
+  >
+
+  <span class="search-icon">⌕</span>
+
+</div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 首頁主視覺 -->
+    <section class="hero">
+
+      <div class="hero-container">
+
+        <!-- 左側文字 -->
+        <div class="hero-text">
+
+          <p class="english-title">
+            For you and your cat. ♡
+          </p>
+
+          <h1>
+            陪你理解貓咪的健康，<br>
+            也陪你走過生命中的告別。
+          </h1>
+
+          <p class="hero-description">
+            整理貓咪疾病、飲食、住院照護與悲傷支持，<br>
+            讓飼主在需要時找到清楚而溫柔的資訊。
+          </p>
+
+          <button id="exploreButton" class="explore-button">
+
+    <span>開始探索</span>
+
+    <span>→</span>
+
+</button>
+
+        </div>
+
+        <!-- 右側圖片 -->
+        <div class="hero-image-area">
+
+          <div class="soft-circle"></div>
+
+          <img
+    src="images/cat-hero.png"
+    alt="抱著愛心的貓咪插畫"
+    class="hero-cat"
+>
+
+          
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 四張分類卡片 -->
+    <section id="categories" class="category-section">
+
+      <div class="category-grid">
+
+        <!-- 疾病知識 -->
+        <article id="disease" class="category-card">
+          <div class="category-image green">
+    <img src="images/cat-doctor.png" alt="疾病知識">
+</div>
+
+          <div class="category-content">
+            <h2 class="green-text">疾病知識</h2>
+
+            <p>
+              了解常見疾病、症狀與就醫時機，
+              守護貓咪健康。
+            </p>
+          </div>
+
+          <a
+  href="disease.html"
+  class="card-button green-button"
+>
+  →
+</a>
+        </article>
+
+        <!-- 飲食與罐頭 -->
+        <article id="food" class="category-card">
+          <div class="category-image orange">
+    <img src="images/cat-can.png" alt="飲食與罐頭">
+</div>
+
+          <div class="category-content">
+            <h2 class="orange-text">飲食與罐頭</h2>
+
+            <p>
+              學習成分分析、營養知識與餵食建議，
+              吃得安心又健康。
+            </p>
+          </div>
+
+          <a
+  href="food.html"
+  class="card-button orange-button"
+>
+  →
+</a>
+        </article>
+
+        <!-- 住院照護 -->
+        <article id="hospital" class="category-card">
+          <div class="category-image blue">
+    <img src="images/cat-hospital.png" alt="住院照護">
+</div>
+
+          <div class="category-content">
+            <h2 class="blue-text">住院照護</h2>
+
+            <p>
+              住院注意事項、探視建議與居家照護，
+              給貓咪最好的陪伴。
+            </p>
+          </div>
+
+          <a
+  href="hospital.html"
+  class="card-button blue-button"
+>
+  →
+</a>
+        </article>
+
+        <!-- 悲傷支持 -->
+<article id="grief" class="category-card">
+
+  <div class="category-image pink">
+    <img src="images/cat-heart.png" alt="悲傷支持">
+  </div>
+
+  <div class="category-content">
+    <h2 class="pink-text">悲傷支持</h2>
+
+    <p>
+      陪你面對離別與思念，
+      找到屬於自己的療癒方式。
+    </p>
+  </div>
+
+  <a
+    href="grief.html"
+    class="card-button pink-button"
+  >
+    →
+  </a>
+
+</article>
+
+      </div>
+
+      <p class="bottom-text">
+        🐾 每一隻貓咪，都是獨一無二的家人 ♡
+      </p>
+
+    </section>
+
+  </main>
+
+  <!-- 連結 JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
+
+<footer class="site-footer">
+
+  <div class="site-footer-content">
+
+    <div class="footer-heart">♡</div>
+
+    <p class="footer-text">
+      陪伴你與毛孩，<br>
+      走過每一段珍貴日常。
+    </p>
+
+    <p class="footer-copyright">
+      © 2026 貓伴日常 Cat Companion Daily
+    </p>
+
+  </div>
+
+</footer>

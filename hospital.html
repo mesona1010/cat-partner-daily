@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="貓伴日常住院照護指南，整理不建議探病的情況、住院時可準備的物品，以及住院期間的飲食與照護注意事項。"
+  >
+
+  <title>住院照護｜貓伴日常</title>
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="images/cat-icon.png"
+  >
+
+  <!-- Google 字體 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       導覽列
+  ========================== -->
+  <header class="header">
+
+    <div class="navigation">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+
+        <div class="logo-image">
+          <img
+            src="images/cat-icon.png"
+            alt="貓伴日常 LOGO"
+          >
+        </div>
+
+        <div class="logo-text">
+          <strong>貓伴日常</strong>
+          <span>陪伴愛貓的每一天 ♡</span>
+        </div>
+
+      </a>
+
+      <!-- 導覽選單 -->
+      <nav class="nav-links" aria-label="主要導覽">
+
+        <a href="disease.html">
+          疾病知識
+        </a>
+
+        <a href="food.html">
+          飲食與罐頭
+        </a>
+
+        <a href="hospital.html" class="active">
+          住院照護
+        </a>
+
+        <a href="grief.html">
+          悲傷支持
+        </a>
+
+        <a href="about.html">
+          關於貓伴日常
+        </a>
+
+      </nav>
+
+      <!-- 搜尋框 -->
+      <div class="search-box">
+
+        <input
+          type="search"
+          placeholder="搜尋功能開發中..."
+          aria-label="搜尋功能開發中"
+          disabled
+        >
+
+        <span class="search-icon" aria-hidden="true">
+          ⌕
+        </span>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         Hero
+    ========================== -->
+    <section class="hospital-hero">
+
+      <div class="hospital-hero-container">
+
+        <!-- Hero 左側文字 -->
+        <div class="hospital-hero-content">
+
+          <p class="hospital-english-title">
+            Hospital Care for Cats ♡
+          </p>
+
+          <h1>
+            住院照護
+          </h1>
+
+          <h2>
+            理解與配合，<br>
+            也是照顧毛孩的一部分。
+          </h2>
+
+          <p class="hospital-hero-description">
+            當毛孩因疾病或手術需要住院時，
+            除了相信醫療團隊，飼主的理解與配合，
+            也是照護過程中重要的一部分。
+          </p>
+
+          <p class="hospital-hero-description">
+            了解住院期間的注意事項，
+            能減少不必要的刺激與干擾，
+            讓醫療團隊更順利地觀察病情，
+            也讓毛孩安心接受治療。
+          </p>
+
+          <a
+            href="#hospital-visiting"
+            class="hospital-explore-button"
+          >
+            <span>開始了解</span>
+
+            <span
+              class="hospital-button-arrow"
+              aria-hidden="true"
+            >
+              ↓
+            </span>
+          </a>
+
+        </div>
+
+        <!-- Hero 右側插畫卡片 -->
+        <div class="hospital-hero-visual" aria-hidden="true">
+
+          <div class="hospital-hero-background-circle"></div>
+
+          <div class="hospital-hero-small-circle circle-one"></div>
+          <div class="hospital-hero-small-circle circle-two"></div>
+          <div class="hospital-hero-small-circle circle-three"></div>
+
+          <div class="hospital-illustration-card">
+
+            <div class="hospital-card-top">
+
+              <span class="hospital-card-cross">
+                ＋
+              </span>
+
+              <span class="hospital-card-heart">
+                ♡
+              </span>
+
+            </div>
+
+            <div class="hospital-cat-illustration">
+              🐱
+            </div>
+
+            <div class="hospital-medical-icons">
+              <span>🩺</span>
+              <span>🏥</span>
+              <span>🤍</span>
+            </div>
+
+            <p class="hospital-card-label">
+              HOSPITAL CARE
+            </p>
+
+            <p class="hospital-card-title">
+              安心接受治療
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hospital-hero-wave" aria-hidden="true"></div>
+
+    </section>
+
+
+    <!-- =========================
+         什麼時候不建議探病
+    ========================== -->
+    <section
+      id="hospital-visiting"
+      class="hospital-visiting-section"
+    >
+
+      <div class="hospital-container">
+
+        <div class="hospital-section-heading">
+
+          <div class="hospital-section-icon" aria-hidden="true">
+            😿
+          </div>
+
+          <p class="hospital-section-number">
+            01
+          </p>
+
+          <h2>
+            什麼時候不建議探病？
+          </h2>
+
+          <p class="hospital-section-quote">
+            有些時候，最好的陪伴，
+            是讓毛孩安心接受治療。
+          </p>
+
+          <p class="hospital-section-description">
+            探病雖然能讓飼主看見毛孩的狀況，
+            但在某些情況下，也可能增加毛孩的壓力或刺激，
+            甚至影響休息與治療。是否適合探病，
+            應以獸醫師與醫療團隊的評估為主。
+          </p>
+
+        </div>
+
+        <div class="hospital-visiting-grid">
+
+          <!-- 情緒容易激動 -->
+          <article class="hospital-visiting-card">
+
+            <div class="hospital-card-icon-wrapper">
+              <span class="hospital-content-icon" aria-hidden="true">
+                😿
+              </span>
+            </div>
+
+            <p class="hospital-card-tag">
+              EMOTIONAL STRESS
+            </p>
+
+            <h3>
+              情緒容易激動
+            </h3>
+
+            <p>
+              有些毛孩看到熟悉的飼主後，
+              可能會因為期待回家而變得焦躁、不安，
+              甚至持續喵叫或試圖離開住院空間。
+            </p>
+
+            <p>
+              過度激動可能影響休息、傷口恢復，
+              也可能增加醫療照護的困難。
+            </p>
+
+          </article>
+
+          <!-- 呼吸不穩定 -->
+          <article class="hospital-visiting-card">
+
+            <div class="hospital-card-icon-wrapper">
+              <span class="hospital-content-icon" aria-hidden="true">
+                😮‍💨
+              </span>
+            </div>
+
+            <p class="hospital-card-tag">
+              BREATHING CARE
+            </p>
+
+            <h3>
+              呼吸不穩定
+            </h3>
+
+            <p>
+              若毛孩正處於喘氣、呼吸急促、
+              呼吸困難，或需要氧氣治療的情況，
+              應盡量減少活動與外界刺激。
+            </p>
+
+            <p>
+              此時安靜休息通常比探病更重要，
+              避免情緒波動增加呼吸負擔。
+            </p>
+
+          </article>
+
+          <!-- 癲癇或神經症狀 -->
+          <article class="hospital-visiting-card">
+
+            <div class="hospital-card-icon-wrapper">
+              <span class="hospital-content-icon" aria-hidden="true">
+                ⚡
+              </span>
+            </div>
+
+            <p class="hospital-card-tag">
+              NEUROLOGICAL CARE
+            </p>
+
+            <h3>
+              癲癇或神經症狀
+            </h3>
+
+            <p>
+              癲癇剛發作後，或仍在進行神經狀況觀察時，
+              毛孩可能對聲音、光線、觸碰與環境變化較為敏感。
+            </p>
+
+            <p>
+              減少刺激並維持安靜，
+              有助於醫療團隊持續監測病情。
+            </p>
+
+          </article>
+
+        </div>
+
+        <!-- 探病提醒 -->
+        <div class="hospital-information-note">
+
+          <div class="hospital-note-icon" aria-hidden="true">
+            🩺
+          </div>
+
+          <div class="hospital-note-content">
+
+            <h3>
+              探病前，先詢問醫療團隊
+            </h3>
+
+            <p>
+              每隻動物的病情、個性與治療需求不同。
+              即使毛孩看起來精神穩定，也應先確認目前是否適合探病，
+              並遵守醫院規定的時間與方式。
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         住院時可以準備什麼
+    ========================== -->
+    <section class="hospital-prepare-section">
+
+      <div class="hospital-container">
+
+        <div class="hospital-section-heading">
+
+          <div class="hospital-section-icon" aria-hidden="true">
+            🎒
+          </div>
+
+          <p class="hospital-section-number">
+            02
+          </p>
+
+          <h2>
+            住院時可以準備什麼？
+          </h2>
+
+          <p class="hospital-section-quote">
+            熟悉的氣味與物品，
+            能讓陌生的環境多一點安全感。
+          </p>
+
+          <p class="hospital-section-description">
+            若醫院允許，可以攜帶一些毛孩熟悉的物品，
+            幫助牠降低陌生環境帶來的壓力。
+            不過，所有物品與食物都應先詢問醫療團隊，
+            確認是否符合目前的治療需求。
+          </p>
+
+        </div>
+
+        <div class="hospital-prepare-grid">
+
+          <!-- 熟悉的棉被 -->
+          <article class="hospital-prepare-card">
+
+            <div class="hospital-prepare-top">
+
+              <span class="hospital-prepare-icon" aria-hidden="true">
+                🧸
+              </span>
+
+              <span class="hospital-prepare-number">
+                01
+              </span>
+
+            </div>
+
+            <h3>
+              熟悉的棉被
+            </h3>
+
+            <p>
+              帶有家中氣味的小毯子或棉被，
+              可能讓毛孩在陌生的住院環境中感到比較安心，
+              並降低緊張與不安。
+            </p>
+
+            <div class="hospital-prepare-reminder">
+              建議攜帶容易清潔、不怕弄髒的小型物品。
+            </div>
+
+          </article>
+
+          <!-- 喜歡的玩具 -->
+          <article class="hospital-prepare-card">
+
+            <div class="hospital-prepare-top">
+
+              <span class="hospital-prepare-icon" aria-hidden="true">
+                🪀
+              </span>
+
+              <span class="hospital-prepare-number">
+                02
+              </span>
+
+            </div>
+
+            <h3>
+              喜歡的玩具
+            </h3>
+
+            <p>
+              若醫療團隊評估合適，
+              可以放置毛孩平時熟悉的小玩具，
+              讓住院空間保留一些熟悉感。
+            </p>
+
+            <div class="hospital-prepare-reminder">
+              避免容易誤食、纏繞或具有細小零件的玩具。
+            </div>
+
+          </article>
+
+          <!-- 平常習慣的食物 -->
+          <article class="hospital-prepare-card">
+
+            <div class="hospital-prepare-top">
+
+              <span class="hospital-prepare-icon" aria-hidden="true">
+                🍽️
+              </span>
+
+              <span class="hospital-prepare-number">
+                03
+              </span>
+
+            </div>
+
+            <h3>
+              平常習慣的食物
+            </h3>
+
+            <p>
+              若獸醫師評估可以，
+              可提供毛孩平時習慣的食物，
+              避免因為飲食突然改變而降低進食意願。
+            </p>
+
+            <div class="hospital-prepare-reminder">
+              是否能食用原本的食物，仍須依病情與醫囑決定。
+            </div>
+
+          </article>
+
+        </div>
+
+        <!-- 準備物品提醒 -->
+        <div class="hospital-permission-box">
+
+          <div class="hospital-permission-symbol" aria-hidden="true">
+            ♡
+          </div>
+
+          <div>
+
+            <h3>
+              攜帶前請先確認
+            </h3>
+
+            <p>
+              並非所有住院動物都適合使用棉被、玩具或原本的食物。
+              例如需要隔離、氧氣治療、術後觀察、禁食，
+              或接受特殊飲食治療的毛孩，
+              可能需要配合不同的照護方式。
+            </p>
+
+            <strong>
+              是否可以攜帶或使用上述物品，
+              應依照醫院規定及獸醫師評估為主。
+            </strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         住院期間不要做什麼
+    ========================== -->
+    <section class="hospital-warning-section">
+
+      <div class="hospital-container">
+
+        <div class="hospital-section-heading">
+
+          <div class="hospital-section-icon" aria-hidden="true">
+            🚫
+          </div>
+
+          <p class="hospital-section-number">
+            03
+          </p>
+
+          <h2>
+            住院期間不要做什麼？
+          </h2>
+
+          <p class="hospital-section-quote">
+            遵循醫療團隊的指示，
+            是幫助毛孩順利康復的重要一步。
+          </p>
+
+          <p class="hospital-section-description">
+            住院期間，醫療團隊會持續觀察毛孩的進食量、
+            食慾、排泄狀況、病情變化與治療反應。
+            自行提供食物、保健品或其他物品，
+            可能干擾檢查與病情評估。
+          </p>
+
+        </div>
+
+        <div class="hospital-warning-grid">
+
+          <!-- 不要自行餵零食 -->
+          <article class="hospital-warning-card">
+
+            <div class="hospital-warning-header">
+
+              <span class="hospital-warning-symbol" aria-hidden="true">
+                !
+              </span>
+
+              <span class="hospital-warning-icon" aria-hidden="true">
+                🍪
+              </span>
+
+            </div>
+
+            <h3>
+              不要自行餵零食
+            </h3>
+
+            <p>
+              零食可能改變毛孩正常的食慾與進食量，
+              使醫療團隊無法準確判斷牠是否願意自主進食。
+            </p>
+
+            <p class="hospital-warning-reason">
+              也可能影響檢查、病情評估與後續治療安排。
+            </p>
+
+          </article>
+
+          <!-- 不要自行提供保健食品 -->
+          <article class="hospital-warning-card">
+
+            <div class="hospital-warning-header">
+
+              <span class="hospital-warning-symbol" aria-hidden="true">
+                !
+              </span>
+
+              <span class="hospital-warning-icon" aria-hidden="true">
+                💊
+              </span>
+
+            </div>
+
+            <h3>
+              不要自行提供保健食品
+            </h3>
+
+            <p>
+              保健食品並不代表在任何情況下都適合使用。
+              部分成分可能與藥物產生交互作用，
+              或增加身體代謝負擔。
+            </p>
+
+            <p class="hospital-warning-reason">
+              使用任何保健食品前，都應先取得獸醫師同意。
+            </p>
+
+          </article>
+
+          <!-- 不要提供民間偏方或信仰食品 -->
+          <article class="hospital-warning-card">
+
+            <div class="hospital-warning-header">
+
+              <span class="hospital-warning-symbol" aria-hidden="true">
+                !
+              </span>
+
+              <span class="hospital-warning-icon" aria-hidden="true">
+                🌿
+              </span>
+
+            </div>
+
+            <h3>
+              不要提供民間偏方或信仰食品
+            </h3>
+
+            <p>
+              草藥、偏方、符水、香灰水，
+              或其他未經獸醫師評估的食品，
+              可能含有不適合動物的成分。
+            </p>
+
+            <p class="hospital-warning-reason">
+              不明成分可能增加中毒與治療風險，甚至延誤病情。
+            </p>
+
+          </article>
+
+          <!-- 不要餵醫囑以外的食物 -->
+          <article class="hospital-warning-card hospital-warning-card-wide">
+
+            <div class="hospital-warning-header">
+
+              <span class="hospital-warning-symbol" aria-hidden="true">
+                !
+              </span>
+
+              <span class="hospital-warning-icon" aria-hidden="true">
+                🍗
+              </span>
+
+            </div>
+
+            <h3>
+              不要餵醫囑以外的食物
+            </h3>
+
+            <p>
+              住院期間，醫療團隊會持續觀察毛孩的食慾、
+              實際進食量、嘔吐情形、排便狀況、
+              病情變化及對治療的反應。
+            </p>
+
+            <p>
+              若自行提供零食、肉泥、雞肉、罐頭，
+              或其他醫囑以外的食物，
+              醫療團隊可能無法正確判斷毛孩的食慾與進食狀況，
+              也可能影響部分檢查結果。
+            </p>
+
+            <p class="hospital-warning-reason">
+              住院期間的飲食也是治療計畫的一部分，
+              應以獸醫師提供或同意的食物為主。
+            </p>
+
+          </article>
+
+        </div>
+
+        <!-- 重要提醒 -->
+        <div class="hospital-important-reminder">
+
+          <div class="hospital-important-icon" aria-hidden="true">
+            🏥
+          </div>
+
+          <div class="hospital-important-content">
+
+            <p class="hospital-important-label">
+              IMPORTANT REMINDER
+            </p>
+
+            <h3>
+              不確定能不能給，就先詢問
+            </h3>
+
+            <p>
+              即使是毛孩平常吃過的食品、保健品或藥物，
+              在生病、手術或住院治療期間，
+              也不一定適合繼續使用。
+            </p>
+
+            <strong>
+              所有飲食、藥物與額外補充品，
+              都應先向獸醫師或醫療團隊確認。
+            </strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         Ending
+    ========================== -->
+    <section class="hospital-ending">
+
+      <div class="hospital-ending-decoration" aria-hidden="true">
+
+        <span class="hospital-ending-paw paw-one">
+          🐾
+        </span>
+
+        <span class="hospital-ending-paw paw-two">
+          🐾
+        </span>
+
+      </div>
+
+      <div class="hospital-ending-content">
+
+        <p class="hospital-ending-icon" aria-hidden="true">
+          🤍
+        </p>
+
+        <p class="hospital-ending-small-title">
+          A GENTLE WAY TO CARE
+        </p>
+
+        <h2>
+          陪伴，<br>
+          不一定是在身邊。
+        </h2>
+
+        <div class="hospital-ending-divider">
+          <span></span>
+          <span>♡</span>
+          <span></span>
+        </div>
+
+        <p>
+          有時候，給毛孩一個安靜接受治療的空間，
+          也是一種溫柔的陪伴。
+        </p>
+
+        <p>
+          相信醫療團隊、耐心等待毛孩康復，
+          等牠回家後，再一起迎接屬於你們的日常。
+        </p>
+
+        <div class="hospital-ending-buttons">
+
+          <a
+            href="index.html"
+            class="hospital-ending-button hospital-ending-button-primary"
+          >
+            返回首頁
+          </a>
+
+          <a
+            href="disease.html"
+            class="hospital-ending-button hospital-ending-button-secondary"
+          >
+            閱讀疾病知識
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+<footer class="site-footer">
+
+  <div class="site-footer-content">
+
+    <div class="footer-heart">♡</div>
+
+    <p class="footer-text">
+      陪伴你與毛孩，<br>
+      走過每一段珍貴日常。
+    </p>
+
+    <p class="footer-copyright">
+      © 2026 貓伴日常 Cat Companion Daily
+    </p>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

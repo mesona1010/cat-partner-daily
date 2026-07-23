@@ -1,0 +1,4970 @@
+/* =========================
+   基本設定
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  font-family:
+    "Noto Sans TC",
+    sans-serif;
+
+  color: #554139;
+
+  background-color: #fffaf4;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+
+/* =========================
+   導覽列
+========================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background-color: rgba(255, 253, 249, 0.96);
+
+  border-bottom: 1px solid #eee4da;
+
+  box-shadow:
+    0 3px 16px rgba(112, 87, 68, 0.06);
+
+  backdrop-filter: blur(14px);
+}
+
+.navigation {
+  width: min(
+    1450px,
+    calc(100% - 56px)
+  );
+
+  min-height: 96px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    auto
+    1fr
+    auto;
+
+  align-items: center;
+
+  gap: 40px;
+}
+
+
+/* Logo */
+
+.logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.logo-image {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+}
+
+.logo-image img {
+  width: 60px;
+  height: 60px;
+
+  object-fit: contain;
+}
+
+.logo-text strong {
+  display: block;
+
+  font-family:
+    "Noto Serif TC",
+    serif;
+
+  font-size: 25px;
+
+  letter-spacing: 0.08em;
+}
+
+.logo-text span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #a27c66;
+
+  font-size: 13px;
+
+  letter-spacing: 0.07em;
+}
+
+
+/* 導覽連結 */
+
+.nav-links {
+  display: flex;
+
+  justify-content: center;
+
+  gap: clamp(
+    22px,
+    3vw,
+    48px
+  );
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+.nav-links a {
+  position: relative;
+
+  transition:
+    color 0.2s ease;
+}
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 100%;
+  bottom: -9px;
+
+  height: 2px;
+
+  background-color: #e99871;
+
+  transition:
+    right 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #df875f;
+}
+
+.nav-links a:hover::after {
+  right: 0;
+}
+
+
+/* 搜尋框 */
+
+.search-box {
+  width: 290px;
+  height: 52px;
+
+  padding: 0 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #ece3da;
+
+  border-radius: 999px;
+
+  box-shadow:
+    0 5px 18px rgba(102, 78, 60, 0.07);
+}
+
+.search-box input {
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  color: #554139;
+
+  background-color: transparent;
+}
+
+.search-box input::placeholder {
+  color: #b7aaa2;
+}
+
+.search-icon {
+  font-size: 27px;
+}
+
+
+/* =========================
+   首頁主視覺
+========================= */
+
+.hero {
+  min-height: 620px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 94% 55%,
+      rgba(249, 206, 181, 0.32),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 0% 45%,
+      rgba(191, 203, 183, 0.35),
+      transparent 19%
+    ),
+    linear-gradient(
+      180deg,
+      #fffdf9 0%,
+      #fffaf4 100%
+    );
+}
+
+.hero-container{
+
+    width:min(
+        1400px,
+        calc(100% - 60px)
+    );
+
+    margin:0 auto;
+
+    display:grid;
+
+    grid-template-columns:
+        58%
+        42%;
+
+    align-items:center;
+
+}
+
+
+/* 左側文字 */
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+
+  max-width: 720px;
+
+  padding-left: 40px;
+}
+
+.english-title {
+  margin: 0 0 18px;
+
+  color: #e2855b;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 24px;
+
+  font-style: italic;
+
+  letter-spacing: 0.03em;
+}
+
+.hero-text h1 {
+  margin: 0;
+
+  font-family:
+    "Noto Serif TC",
+    serif;
+
+  font-size: clamp(
+    26px,
+    2.6vw,
+    42px
+  );
+
+  font-weight: 600;
+
+  line-height: 1.45;
+
+  letter-spacing: 0.02em;
+
+  max-width: 760px;
+}
+
+.hero-description {
+  margin: 24px 0 30px;
+
+  color: #735e53;
+
+  font-size: 17px;
+
+  line-height: 2;
+}
+
+
+/* 開始探索按鈕 */
+
+.explore-button {
+  min-width: 250px;
+  height: 70px;
+
+  padding: 0 30px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f3a17c,
+      #eb8e66
+    );
+
+  border: none;
+
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  font-size: 19px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 12px 28px rgba(226, 126, 84, 0.22);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.explore-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 17px 34px rgba(226, 126, 84, 0.3);
+}
+
+/* ⭐ 新增這段 */
+
+.paw-icon{
+
+    width:50px;
+
+    height:50px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+
+}
+
+/* 右側圖片區 */
+
+.hero-image-area {
+  position: relative;
+
+  min-height: 560px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.soft-circle{
+
+    position:absolute;
+
+    width:580px;
+    height:580px;
+
+    border-radius:50%;
+
+    background:
+      radial-gradient(
+        circle,
+        #fde7d9 0%,
+        #fff1e8 58%,
+        transparent 70%
+      );
+
+}
+
+.hero-cat {
+  position: relative;
+  z-index: 2;
+
+  width: 920px;
+  max-width: none;
+  height: auto;
+
+  object-fit: contain;
+
+  transform:
+    translate(-120px, 50px)
+    scale(1.08);
+
+  transform-origin: center;
+
+  filter:
+    drop-shadow(
+      0 20px 22px rgba(105, 77, 60, 0.12)
+    );
+}
+
+
+/* 裝飾 */
+
+.decoration {
+  position: absolute;
+
+  z-index: 3;
+}
+
+.moon{
+
+    top:90px;
+
+    right:120px;
+
+    font-size:58px;
+
+}
+
+.star-one{
+
+    top:110px;
+
+    left:130px;
+
+    font-size:28px;
+
+}
+
+.star-two{
+
+    bottom:120px;
+
+    right:150px;
+
+    font-size:22px;
+
+}
+
+.heart{
+
+    top:150px;
+
+    right:200px;
+
+    font-size:26px;
+
+}
+
+
+/* =========================
+   分類卡片區
+========================= */
+
+.category-section {
+  padding: 24px 0 34px;
+
+  background:
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(190, 204, 181, 0.32),
+      transparent 17%
+    ),
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(248, 203, 177, 0.3),
+      transparent 18%
+    ),
+    #fffaf4;
+}
+
+.category-grid {
+  width: min(
+    1410px,
+    calc(100% - 70px)
+  );
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+.category-card {
+  position: relative;
+
+  min-height: 245px;
+
+  padding: 25px 23px;
+
+  display: grid;
+
+  grid-template-columns:
+    120px
+    1fr;
+
+  align-items: center;
+
+  gap: 15px;
+
+  background-color:
+    rgba(255, 255, 255, 0.92);
+
+  border: 1px solid #eee5dc;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 12px 35px rgba(117, 87, 68, 0.1);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 18px 42px rgba(117, 87, 68, 0.14);
+}
+
+
+/* 卡片圓形插圖 */
+
+.category-image {
+
+  width: 120px;
+  height: 155px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 60px;
+
+  overflow: hidden;
+}
+
+.category-image img{
+
+    width:110px;
+
+    height:110px;
+
+    object-fit:contain;
+
+    transition:.3s;
+
+}
+
+.category-card:hover .category-image img{
+
+    transform:scale(1.08);
+
+}
+
+.category-image.green {
+  background-color: #e7efe3;
+}
+
+.category-image.orange {
+  background-color: #fff0e6;
+}
+
+.category-image.blue {
+  background-color: #e7f0f1;
+}
+
+.category-image.pink {
+  background-color: #fbe9e1;
+}
+
+
+/* 卡片文字 */
+
+.category-content h2 {
+  margin: 0 0 15px;
+
+  font-family:
+    "Noto Serif TC",
+    serif;
+
+  font-size: 24px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.05em;
+}
+
+.category-content p {
+  margin: 0;
+
+  color: #735f54;
+
+  font-size: 13px;
+
+  line-height: 2;
+}
+
+.green-text {
+  color: #648653;
+}
+
+.orange-text {
+  color: #dc6f40;
+}
+
+.blue-text {
+  color: #518899;
+}
+
+.pink-text {
+  color: #d57968;
+}
+
+
+/* 卡片右下角按鈕 */
+
+.card-button {
+  position: absolute;
+
+  right: 20px;
+  bottom: 18px;
+
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+  place-items: center;
+
+  color: #ffffff;
+
+  border: none;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  font-size: 25px;
+
+  transition:
+    transform 0.2s ease;
+}
+
+.card-button:hover {
+  transform: translateX(4px);
+}
+
+.green-button {
+  background-color: #84a174;
+}
+
+.orange-button {
+  background-color: #ee996e;
+}
+
+.blue-button {
+  background-color: #8eb3ba;
+}
+
+.pink-button {
+  background-color: #e7a08f;
+}
+
+
+/* 下方文字 */
+
+.bottom-text {
+  margin: 28px 0 0;
+
+  text-align: center;
+
+  color: #b07e60;
+
+  font-family:
+    "Noto Serif TC",
+    serif;
+
+  font-size: 18px;
+
+  letter-spacing: 0.16em;
+}
+
+
+/* =========================
+   關於區塊
+========================= */
+
+.about-section {
+  min-height: 330px;
+
+  padding: 90px 20px;
+
+  display: grid;
+
+  place-items: center;
+
+  text-align: center;
+
+  background-color: #fffefb;
+}
+
+.about-section h2 {
+  margin: 0 0 15px;
+
+  font-family:
+    "Noto Serif TC",
+    serif;
+
+  font-size: 38px;
+}
+
+.about-section p {
+  color: #8c7163;
+}
+
+
+/* =========================
+   平板版
+========================= */
+
+@media (max-width: 1200px) {
+
+  .search-box {
+    display: none;
+  }
+
+  .navigation {
+    grid-template-columns:
+      auto
+      1fr;
+  }
+
+  .hero-container {
+    grid-template-columns:
+      1fr
+      1fr;
+  }
+
+  .category-grid {
+    max-width: 900px;
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================
+   手機版
+========================= */
+
+@media (max-width: 820px) {
+
+  .navigation {
+    width: calc(100% - 28px);
+
+    min-height: 78px;
+
+    display: flex;
+
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero-container {
+    width: calc(100% - 30px);
+
+    padding: 60px 0 20px;
+
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 39px;
+  }
+
+  .hero-description br {
+    display: none;
+  }
+
+  .hero-image-area {
+    min-height: 430px;
+  }
+
+  .soft-circle {
+    width: 390px;
+    height: 390px;
+  }
+
+  .hero-cat {
+    max-height: 430px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .logo-text strong {
+    font-size: 20px;
+  }
+
+  .logo-text span {
+    font-size: 11px;
+  }
+
+  .english-title {
+    font-size: 21px;
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .explore-button {
+    min-width: 220px;
+    height: 62px;
+
+    font-size: 17px;
+  }
+
+  .hero-image-area {
+    min-height: 340px;
+  }
+
+  .soft-circle {
+    width: 310px;
+    height: 310px;
+  }
+
+  .category-grid {
+    width: calc(100% - 28px);
+
+    grid-template-columns: 1fr;
+  }
+
+  .category-card {
+    grid-template-columns:
+      110px
+      1fr;
+  }
+
+  .category-image {
+    width: 110px;
+    height: 145px;
+  }
+
+  .bottom-text {
+    padding: 0 15px;
+
+    font-size: 14px;
+
+    letter-spacing: 0.07em;
+  }
+
+}
+
+/* =========================
+   疾病知識頁
+========================= */
+
+.disease-hero {
+  padding: 90px 20px 65px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 15% 30%,
+      rgba(190, 204, 181, 0.35),
+      transparent 23%
+    ),
+    radial-gradient(
+      circle at 90% 35%,
+      rgba(248, 203, 177, 0.28),
+      transparent 22%
+    ),
+    #fffaf4;
+}
+
+.disease-english-title {
+  margin: 0 0 12px;
+
+  color: #db8b64;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 21px;
+
+  font-style: italic;
+}
+
+.disease-hero h1 {
+  margin: 0 0 20px;
+
+  color: #5b453b;
+
+  font-family:
+    "Noto Serif TC",
+    serif;
+
+  font-size: 46px;
+
+  letter-spacing: 0.08em;
+}
+
+.disease-hero p {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: #806b60;
+
+  font-size: 17px;
+
+  line-height: 1.9;
+}
+
+.disease-section {
+  padding: 65px 0 100px;
+
+  background-color: #fffdf9;
+}
+
+.disease-grid {
+  width: min(
+    1100px,
+    calc(100% - 60px)
+  );
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 28px;
+}
+
+.disease-card {
+  min-height: 245px;
+
+  padding: 34px;
+
+  display: grid;
+
+  grid-template-columns:
+    75px
+    1fr;
+
+  gap: 22px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #eee4da;
+
+  border-radius: 26px;
+
+  box-shadow:
+    0 12px 32px rgba(108, 80, 62, 0.08);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.disease-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 18px 40px rgba(108, 80, 62, 0.13);
+}
+
+.disease-number {
+  width: 65px;
+  height: 65px;
+
+  display: grid;
+
+  place-items: center;
+
+  color: #ffffff;
+
+  background-color: #8fa882;
+
+  border-radius: 50%;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+.disease-card-content h2 {
+  margin: 5px 0 16px;
+
+  color: #617c55;
+
+  font-family:
+    "Noto Serif TC",
+    serif;
+
+  font-size: 27px;
+}
+
+.disease-card-content p {
+  margin: 0 0 22px;
+
+  color: #78645a;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+.disease-link {
+  color: #df825c;
+
+  font-weight: 700;
+
+  display: inline-block;
+
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.disease-link:hover {
+  color: #c96d49;
+
+  transform: translateX(8px);
+}
+
+/* =========================
+   疾病文章詳細頁
+========================= */
+
+/* 上方標題區 */
+
+.article-hero {
+  padding: 82px 20px 70px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 12% 30%,
+      rgba(190, 204, 181, 0.32),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 90% 35%,
+      rgba(248, 203, 177, 0.28),
+      transparent 22%
+    ),
+    #fffaf4;
+}
+
+.article-category {
+  margin: 0 0 14px;
+
+  color: #7d9a70;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.article-hero h1 {
+  margin: 0 0 20px;
+
+  color: #5c473d;
+
+  font-family:
+    "Noto Serif TC",
+    serif;
+
+  font-size: 46px;
+
+  letter-spacing: 0.06em;
+}
+
+.article-introduction {
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  color: #806b60;
+
+  font-size: 17px;
+
+  line-height: 1.9;
+}
+
+
+/* 文章背景 */
+
+.article-section {
+  padding: 65px 0 100px;
+
+  background-color: #fffdf9;
+}
+
+
+/* 控制文章寬度 */
+
+.article-container {
+  width: min(
+    900px,
+    calc(100% - 60px)
+  );
+
+  margin: 0 auto;
+}
+
+
+/* 返回連結 */
+
+.back-link {
+  display: inline-block;
+
+  margin-bottom: 28px;
+
+  color: #d77e58;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #bd6745;
+
+  transform: translateX(-4px);
+}
+
+
+/* 每一個文章區塊 */
+
+.article-block {
+  margin-bottom: 26px;
+
+  padding: 34px 40px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #eee4da;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 10px 28px rgba(105, 79, 61, 0.07);
+}
+
+.article-block h2 {
+  margin: 0 0 18px;
+
+  color: #66805b;
+
+  font-family:
+    "Noto Serif TC",
+    serif;
+
+  font-size: 27px;
+
+  letter-spacing: 0.04em;
+}
+
+.article-block p {
+  margin: 0 0 16px;
+
+  color: #705d53;
+
+  font-size: 16px;
+
+  line-height: 2;
+}
+
+.article-block p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* 症狀與照護清單 */
+
+.article-block ul {
+  margin: 8px 0 0;
+
+  padding-left: 24px;
+}
+
+.article-block li {
+  margin-bottom: 10px;
+
+  color: #705d53;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+.article-block li::marker {
+  color: #8da781;
+}
+
+
+/* 需要就醫的提醒區塊 */
+
+.warning-block {
+  background-color: #fff5ef;
+
+  border-color: #f1d7c7;
+}
+
+.warning-block h2 {
+  color: #d97853;
+}
+
+
+/* 最下方醫療提醒 */
+
+.medical-note {
+  margin-top: 35px;
+
+  padding: 25px 30px;
+
+  text-align: center;
+
+  background-color: #eef4eb;
+
+  border-radius: 20px;
+}
+
+.medical-note strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #607b55;
+
+  font-family:
+    "Noto Serif TC",
+    serif;
+
+  font-size: 20px;
+}
+
+.medical-note p {
+  margin: 0;
+
+  color: #6f635b;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.article-gallery{
+
+    margin-top:60px;
+
+    margin-bottom:50px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+}
+
+.article-gallery img{
+
+    width:420px;
+
+    border-radius:18px;
+
+    box-shadow:
+        0 10px 28px rgba(0,0,0,.08);
+
+}
+
+/* =========================
+   Footer
+========================= */
+
+.footer{
+
+    margin-top:0;
+
+    background:#f6f0ea;
+
+    border-top:1px solid #e6ddd5;
+
+}
+
+.footer-container{
+
+    width:min(1000px, calc(100% - 60px));
+
+    margin:0 auto;
+
+    padding:60px 0;
+
+    text-align:center;
+
+}
+
+.footer h2{
+
+    margin:0;
+
+    color:#5a473d;
+
+    font-family:"Noto Serif TC", serif;
+
+    font-size:34px;
+
+}
+
+.footer-slogan{
+
+    margin:12px 0 35px;
+
+    color:#8f7668;
+
+}
+
+.footer hr{
+
+    margin:35px auto;
+
+    border:none;
+
+    border-top:1px solid #ddd2ca;
+
+}
+
+.footer h3{
+
+    color:#5a473d;
+
+    font-size:22px;
+
+}
+
+.footer-reference{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:25px 0;
+
+}
+
+.footer-reference li{
+
+    margin:12px 0;
+
+    color:#6e5d54;
+
+}
+
+.footer-note{
+
+    color:#907d71;
+
+    line-height:1.8;
+
+}
+
+.copyright{
+
+    margin-top:25px;
+
+    color:#ad9d92;
+
+    font-size:14px;
+
+}
+
+.article-block .danger-text {
+    margin-top: 16px;
+
+    color: #d94b3d;
+
+    font-weight: 700;
+
+    line-height: 1.8;
+}
+
+.highlight-red{
+    color:#d94b3d;
+
+    font-weight:700;
+}
+
+/* 悲傷支持標題 */
+
+.grief-hero{
+  padding:100px 24px 70px;
+  text-align:center;
+  background:#f8f2ee;
+}
+
+.grief-english-title{
+  margin-bottom:12px;
+  color:#c96d49;
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.grief-hero h1{
+  margin-bottom:20px;
+  color:#4f4039;
+  font-family:"Noto Serif TC", serif;
+  font-size:48px;
+}
+
+.grief-hero > p:last-child{
+  max-width:680px;
+  margin:0 auto;
+  color:#705d53;
+  line-height:2;
+}
+
+
+/* 新增紀念便條表單 */
+
+.memory-form-section{
+  padding:80px 24px;
+  background:#fffaf7;
+}
+
+.memory-form-container{
+  max-width:760px;
+  margin:0 auto;
+  padding:40px;
+  background:#ffffff;
+  border-radius:24px;
+  box-shadow:0 12px 35px rgba(91, 70, 59, 0.1);
+}
+
+.memory-form-container h2{
+  margin-bottom:30px;
+  color:#4f4039;
+  font-family:"Noto Serif TC", serif;
+  font-size:30px;
+  text-align:center;
+}
+
+.form-group{
+  margin-bottom:24px;
+}
+
+.form-group label{
+  display:block;
+  margin-bottom:10px;
+  color:#5f4c43;
+  font-weight:600;
+}
+
+.form-group input,
+.form-group textarea{
+  width:100%;
+  padding:14px 16px;
+  border:1px solid #dccbc2;
+  border-radius:12px;
+  background:#fffdfb;
+  color:#5f4c43;
+  font-family:inherit;
+  font-size:16px;
+}
+
+.form-group textarea{
+  resize:vertical;
+}
+
+.memory-submit-button{
+  display:block;
+  margin:30px auto 0;
+  padding:14px 30px;
+  border:none;
+  border-radius:999px;
+  background:#c96d49;
+  color:#ffffff;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.memory-submit-button:hover{
+  transform:translateY(-2px);
+}
+
+.privacy-note{
+  margin-top:28px;
+  color:#8a7468;
+  font-size:14px;
+  line-height:1.8;
+  text-align:center;
+}
+
+
+/* 紀念牆 */
+
+.memory-wall-section{
+  padding:80px 24px;
+}
+
+.memory-wall-container{
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.memory-wall-container h2{
+  margin-bottom:30px;
+  color:#4f4039;
+  font-family:"Noto Serif TC", serif;
+  font-size:32px;
+  text-align:center;
+}
+
+.memory-wall{
+  min-height:400px;
+  padding:50px;
+  background:#cfa77b;
+  border:14px solid #9c724f;
+  border-radius:20px;
+  box-shadow:0 15px 40px rgba(77, 55, 42, 0.18);
+}
+
+.memory-note{
+  position:relative;
+  width:260px;
+  padding:35px 24px 28px;
+  background:#fff1a8;
+  box-shadow:0 8px 18px rgba(65, 45, 33, 0.18);
+  transform:rotate(-2deg);
+}
+
+.memory-pin{
+  position:absolute;
+  top:-16px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:30px;
+}
+
+.memory-note h3{
+  margin-bottom:16px;
+  color:#5b463d;
+  font-family:"Noto Serif TC", serif;
+}
+
+.memory-note p{
+  color:#705d53;
+  line-height:1.9;
+}
+
+/* =========================
+   悲傷支持頁
+========================= */
+
+/* 主視覺 */
+.grief-hero {
+  padding: 90px 24px 80px;
+  background:
+    linear-gradient(
+      135deg,
+      #fff8f7 0%,
+      #fffdf9 55%,
+      #f7f3ef 100%
+    );
+}
+
+.grief-hero-container {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.grief-hero-text h1 {
+  margin: 14px 0 24px;
+  color: #594b47;
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(32px, 4vw, 50px);
+  line-height: 1.45;
+}
+
+.grief-hero-description {
+  max-width: 650px;
+  margin-bottom: 34px;
+  color: #756864;
+  font-size: 17px;
+  line-height: 2;
+}
+
+.grief-hero-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+}
+
+.grief-hero-image img {
+  position: relative;
+  z-index: 2;
+  width: min(350px, 90%);
+  object-fit: contain;
+}
+
+.grief-soft-circle {
+  position: absolute;
+  width: 370px;
+  height: 370px;
+  border-radius: 50%;
+  background: #f8dfdf;
+  opacity: 0.75;
+}
+
+/* 共用內容寬度 */
+.grief-content-container {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.grief-section-heading {
+  max-width: 760px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.grief-section-number {
+  margin: 0 0 8px;
+  color: #c78b8e;
+  font-family: "Noto Serif TC", serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.grief-section-heading h2 {
+  margin: 0 0 18px;
+  color: #584b47;
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(30px, 4vw, 44px);
+}
+
+.grief-section-heading > p:last-child {
+  margin: 0;
+  color: #7c6e69;
+  line-height: 1.95;
+}
+
+/* 理解悲傷 */
+.understand-section {
+  padding: 100px 24px;
+  background: #fffaf7;
+}
+
+.understand-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.understand-card {
+  padding: 32px 26px;
+  border: 1px solid #eee3de;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 12px 32px rgba(94, 72, 65, 0.07);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.understand-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 42px rgba(94, 72, 65, 0.12);
+}
+
+.understand-icon {
+  margin-bottom: 18px;
+  font-size: 34px;
+}
+
+.understand-card h3 {
+  margin: 0 0 14px;
+  color: #5b4e49;
+  font-family: "Noto Serif TC", serif;
+  font-size: 23px;
+}
+
+.understand-card p {
+  margin: 0;
+  color: #80726d;
+  line-height: 1.85;
+}
+
+/* 照顧自己 */
+.self-care-section {
+  padding: 100px 24px;
+  background: #ffffff;
+}
+
+.self-care-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.self-care-card {
+  min-height: 280px;
+  padding: 34px 27px;
+  border-radius: 24px;
+  background: #f5f8f1;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.self-care-card:nth-child(2) {
+  background: #fff6ef;
+}
+
+.self-care-card:nth-child(3) {
+  background: #f9f2f4;
+}
+
+.self-care-card:nth-child(4) {
+  background: #f0f6f7;
+}
+
+.self-care-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 16px 38px rgba(94, 72, 65, 0.1);
+}
+
+.self-care-icon {
+  margin-bottom: 18px;
+  font-size: 38px;
+}
+
+.self-care-card h3 {
+  margin: 0 0 15px;
+  color: #584b47;
+  font-family: "Noto Serif TC", serif;
+  font-size: 23px;
+}
+
+.self-care-card p {
+  margin: 0;
+  color: #7d706b;
+  line-height: 1.85;
+}
+
+/* 思念角落 */
+.memory-section {
+  padding: 105px 24px;
+  background: #fff4f3;
+}
+
+.memory-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 45px;
+  align-items: start;
+}
+
+.memory-form-card {
+  padding: 36px;
+  border: 1px solid #edd9d6;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 16px 38px rgba(90, 67, 62, 0.09);
+}
+
+.memory-form-card h3 {
+  margin: 0 0 28px;
+  color: #594b47;
+  font-family: "Noto Serif TC", serif;
+  font-size: 27px;
+}
+
+.memory-form-group {
+  margin-bottom: 22px;
+}
+
+.memory-form-group label {
+  display: block;
+  margin-bottom: 9px;
+  color: #655651;
+  font-weight: 700;
+}
+
+.memory-form-group input,
+.memory-form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border: 1px solid #dfcfca;
+  border-radius: 14px;
+  background: #fffdfc;
+  color: #594d49;
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+}
+
+.memory-form-group textarea {
+  resize: vertical;
+}
+
+.memory-form-group input:focus,
+.memory-form-group textarea:focus {
+  border-color: #c9898c;
+  box-shadow: 0 0 0 3px rgba(201, 137, 140, 0.14);
+}
+
+.memory-color-area {
+  margin-bottom: 24px;
+}
+
+.memory-color-area p {
+  margin: 0 0 12px;
+  color: #655651;
+  font-weight: 700;
+}
+
+.memory-color-options {
+  display: flex;
+  gap: 12px;
+}
+
+.memory-color {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.memory-color:hover {
+  border-color: #a87979;
+}
+
+.yellow-note {
+  background: #f6e6a9;
+}
+
+.pink-note {
+  background: #f3cfd4;
+}
+
+.green-note {
+  background: #d8e7cf;
+}
+
+.blue-note {
+  background: #d6e6ed;
+}
+
+.memory-submit-button {
+  width: 100%;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 14px;
+  background: #bf7f82;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.memory-submit-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.memory-development-note {
+  margin: 12px 0 0;
+  color: #9a8580;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* 軟木牆 */
+.memory-board {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  min-height: 520px;
+  padding: 45px;
+  border: 12px solid #a97552;
+  border-radius: 20px;
+  background:
+    radial-gradient(
+      circle at 25% 25%,
+      rgba(255, 255, 255, 0.16) 0 2px,
+      transparent 3px
+    ),
+    radial-gradient(
+      circle at 70% 60%,
+      rgba(99, 54, 28, 0.12) 0 2px,
+      transparent 3px
+    ),
+    #c99769;
+  background-size: 34px 34px, 41px 41px, auto;
+  box-shadow:
+    inset 0 0 25px rgba(88, 52, 31, 0.18),
+    0 18px 40px rgba(90, 63, 45, 0.16);
+}
+
+.memory-note {
+  position: relative;
+  min-height: 190px;
+  padding: 34px 25px 24px;
+  box-shadow: 0 10px 18px rgba(80, 54, 38, 0.17);
+}
+
+.memory-note:nth-child(1) {
+  transform: rotate(-2deg);
+}
+
+.memory-note:nth-child(2) {
+  transform: rotate(2deg);
+}
+
+.memory-note:nth-child(3) {
+  transform: rotate(-1deg);
+}
+
+.note-yellow {
+  background: #f7e8ad;
+}
+
+.note-pink {
+  background: #f4cfd5;
+}
+
+.note-green {
+  background: #dbe9d2;
+}
+
+.memory-pin {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  color: #b95757;
+  font-size: 22px;
+  transform: translateX(-50%);
+  text-shadow: 0 2px 2px rgba(80, 30, 30, 0.2);
+}
+
+.memory-note-to {
+  margin: 0 0 14px;
+  color: #5a4a43;
+  font-family: "Noto Serif TC", serif;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.memory-note-message {
+  margin: 0;
+  color: #65564e;
+  line-height: 1.8;
+}
+
+.memory-note-symbol {
+  margin: 18px 0 0;
+  color: #9e6667;
+  font-size: 22px;
+  text-align: right;
+}
+
+.memory-privacy-note {
+  max-width: 760px;
+  margin: 32px auto 0;
+  color: #8b7772;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* 結尾 */
+.grief-ending {
+  padding: 110px 24px;
+  background: #f3e8e5;
+}
+
+.grief-ending-content {
+  width: min(720px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ending-symbol {
+  margin: 0 0 18px;
+  color: #c78386;
+  font-size: 32px;
+}
+
+.grief-ending h2 {
+  margin: 0 0 20px;
+  color: #584b47;
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(28px, 4vw, 42px);
+}
+
+.grief-ending-content > p:last-child {
+  margin: 0;
+  color: #786a66;
+  line-height: 2;
+}
+
+/* 平板 */
+@media (max-width: 950px) {
+
+  .grief-hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .grief-hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .grief-hero-image {
+    min-height: 320px;
+  }
+
+  .grief-soft-circle {
+    width: 290px;
+    height: 290px;
+  }
+
+  .understand-grid,
+  .self-care-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .memory-layout {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* 手機 */
+@media (max-width: 600px) {
+
+  .grief-hero {
+    padding: 65px 20px 55px;
+  }
+
+  .grief-hero-text h1 {
+    font-size: 34px;
+  }
+
+  .understand-section,
+  .self-care-section,
+  .memory-section {
+    padding: 75px 20px;
+  }
+
+  .understand-grid,
+  .self-care-grid,
+  .memory-board {
+    grid-template-columns: 1fr;
+  }
+
+  .memory-form-card {
+    padding: 27px 22px;
+  }
+
+  .memory-board {
+    padding: 32px 24px;
+    border-width: 9px;
+  }
+
+  .memory-note {
+    transform: none !important;
+  }
+
+}
+
+/* 思念便條互動狀態 */
+.memory-color.selected {
+  border-color: #8f6264;
+  box-shadow:
+    0 0 0 3px rgba(143, 98, 100, 0.15);
+  transform: scale(1.08);
+}
+
+.memory-submit-button {
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.memory-submit-button:hover {
+  background: #ad6d71;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(150, 91, 95, 0.2);
+}
+
+.memory-submit-button:active {
+  transform: translateY(0);
+}
+
+.memory-message-success {
+  color: #66835f;
+}
+
+.memory-message-error {
+  color: #c15e5e;
+}
+
+.note-blue {
+  background: #d8e8ef;
+}
+
+.memory-note-new {
+  animation: memoryNoteAppear 0.55s ease;
+}
+
+@keyframes memoryNoteAppear {
+
+  from {
+    opacity: 0;
+    transform: translateY(25px) rotate(-2deg) scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+
+}
+
+/* 刪除思念便條按鈕 */
+.memory-delete-button {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  z-index: 3;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  color: #8c6663;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  transition:
+    opacity 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.memory-note:hover .memory-delete-button,
+.memory-delete-button:focus-visible {
+  opacity: 1;
+}
+
+.memory-delete-button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: scale(1.1);
+}
+
+.memory-delete-button:focus-visible {
+  outline: 3px solid rgba(143, 98, 100, 0.3);
+}
+
+/* 刪除時的淡出動畫 */
+.memory-note-removing {
+  pointer-events: none;
+  animation: memoryNoteRemove 0.3s ease forwards;
+}
+
+@keyframes memoryNoteRemove {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+}
+
+/* =========================
+   關於貓伴日常頁面
+========================= */
+
+/* Hero */
+.about-hero {
+  padding: 90px 24px 85px;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      135deg,
+      #fffaf6 0%,
+      #fffdf9 50%,
+      #f5eee8 100%
+    );
+}
+
+.about-hero-container {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 75px;
+}
+
+.about-hero-text h1 {
+  margin: 13px 0 12px;
+  color: #594b47;
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(36px, 4.5vw, 56px);
+  line-height: 1.35;
+}
+
+.about-hero-text h2 {
+  margin: 0 0 25px;
+  color: #b17678;
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(25px, 3vw, 36px);
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.about-hero-description {
+  max-width: 650px;
+  margin: 0 0 34px;
+  color: #756864;
+  font-size: 17px;
+  line-height: 2;
+}
+
+.about-hero-visual {
+  position: relative;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-circle {
+  position: absolute;
+  width: 405px;
+  height: 405px;
+  border-radius: 50%;
+  background: #f2d8d6;
+  opacity: 0.75;
+}
+
+.about-hero-card {
+  position: relative;
+  z-index: 2;
+  width: min(350px, 85%);
+  padding: 58px 38px 45px;
+  border: 1px solid rgba(216, 185, 179, 0.75);
+  border-radius: 38px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 25px 55px rgba(104, 77, 68, 0.14);
+  text-align: center;
+  transform: rotate(2deg);
+}
+
+.about-cat-icon {
+  margin-bottom: 18px;
+  font-size: 82px;
+}
+
+.about-hero-card-small {
+  margin: 0 0 10px;
+  color: #b68283;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.about-hero-card-title {
+  margin: 0;
+  color: #594b47;
+  font-family: "Noto Serif TC", serif;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.about-hero-paws {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  color: #bd8788;
+  font-size: 22px;
+}
+
+/* 共用區塊 */
+.about-content-container {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.about-section-heading {
+  max-width: 760px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.about-section-number {
+  margin: 0 0 8px;
+  color: #c28788;
+  font-family: "Noto Serif TC", serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.about-section-heading h2 {
+  margin: 0 0 18px;
+  color: #594b47;
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(30px, 4vw, 44px);
+}
+
+.about-section-heading > p:last-child {
+  margin: 0;
+  color: #7b6d68;
+  line-height: 1.95;
+}
+
+/* 貓伴日常相信 */
+.about-belief-section {
+  padding: 100px 24px;
+  background: #fffaf7;
+}
+
+.about-belief-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.about-belief-card {
+  padding: 38px 30px;
+  border: 1px solid #eee0da;
+  border-radius: 26px;
+  background: #ffffff;
+  box-shadow: 0 14px 36px rgba(91, 67, 60, 0.07);
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.about-belief-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 44px rgba(91, 67, 60, 0.12);
+}
+
+.about-belief-card:nth-child(2) {
+  background: #fff7f6;
+}
+
+.about-belief-card:nth-child(3) {
+  background: #f7faf4;
+}
+
+.about-card-icon {
+  margin-bottom: 20px;
+  font-size: 42px;
+}
+
+.about-belief-card h3 {
+  margin: 0 0 15px;
+  color: #594b47;
+  font-family: "Noto Serif TC", serif;
+  font-size: 24px;
+}
+
+.about-belief-card p {
+  margin: 0;
+  color: #7a6c67;
+  line-height: 1.9;
+}
+
+/* 創立故事 */
+.about-story-section {
+  padding: 110px 24px;
+  background: #ffffff;
+}
+
+.about-story-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 90px;
+}
+
+.about-story-decoration {
+  position: relative;
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-main-shape {
+  position: relative;
+  z-index: 2;
+  width: 310px;
+  height: 350px;
+  border-radius: 48% 48% 42% 42%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(
+      145deg,
+      #f5ded7,
+      #efd1cc
+    );
+  box-shadow: 0 22px 48px rgba(108, 77, 67, 0.14);
+}
+
+.story-cat {
+  font-size: 105px;
+}
+
+.story-heart {
+  margin-top: 18px;
+  color: #b9787a;
+  font-size: 38px;
+}
+
+.story-small-circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.story-circle-one {
+  top: 30px;
+  right: 45px;
+  width: 85px;
+  height: 85px;
+  background: #f5ead7;
+}
+
+.story-circle-two {
+  bottom: 30px;
+  left: 35px;
+  width: 115px;
+  height: 115px;
+  background: #e3eee1;
+}
+
+.about-story-content h2 {
+  margin: 5px 0 28px;
+  color: #594b47;
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.45;
+}
+
+.about-story-content > p:not(.about-section-number) {
+  margin: 0 0 20px;
+  color: #746661;
+  font-size: 17px;
+  line-height: 2;
+}
+
+.about-story-content > p:nth-of-type(3) {
+  color: #ad7476;
+  font-family: "Noto Serif TC", serif;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+/* 網站提供內容 */
+.about-services-section {
+  padding: 105px 24px;
+  background: #f7f4f0;
+}
+
+.about-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.about-service-card {
+  padding: 36px 34px;
+  border: 1px solid #e9ddd7;
+  border-radius: 26px;
+  background: #ffffff;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 12px 32px rgba(87, 66, 59, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.about-service-card:hover {
+  transform: translateY(-7px);
+  border-color: #d7b6b1;
+  box-shadow: 0 20px 44px rgba(87, 66, 59, 0.11);
+}
+
+.about-service-icon {
+  margin-bottom: 17px;
+  font-size: 38px;
+}
+
+.about-service-card h3 {
+  margin: 0 0 14px;
+  color: #594b47;
+  font-family: "Noto Serif TC", serif;
+  font-size: 26px;
+}
+
+.about-service-card p {
+  margin: 0 0 24px;
+  color: #796b66;
+  line-height: 1.9;
+}
+
+.about-service-link {
+  color: #b27376;
+  font-weight: 700;
+}
+
+/* 網站特色 */
+.about-features-section {
+  padding: 105px 24px;
+  background: #ffffff;
+}
+
+.about-features-grid {
+  max-width: 950px;
+  margin: 0 auto;
+  display: grid;
+  gap: 22px;
+}
+
+.about-feature-item {
+  padding: 29px 32px;
+  border: 1px solid #eadfd9;
+  border-radius: 22px;
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  align-items: center;
+  gap: 25px;
+  background: #fffdfb;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.about-feature-item:hover {
+  transform: translateX(7px);
+  box-shadow: 0 14px 34px rgba(91, 68, 60, 0.08);
+}
+
+.about-feature-number {
+  width: 68px;
+  height: 68px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2dfdc;
+  color: #a96f71;
+  font-family: "Noto Serif TC", serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.about-feature-item:nth-child(2) .about-feature-number {
+  background: #f1ead9;
+}
+
+.about-feature-item:nth-child(3) .about-feature-number {
+  background: #e6eee2;
+}
+
+.about-feature-item:nth-child(4) .about-feature-number {
+  background: #e4edf0;
+}
+
+.about-feature-item h3 {
+  margin: 0 0 9px;
+  color: #594b47;
+  font-family: "Noto Serif TC", serif;
+  font-size: 23px;
+}
+
+.about-feature-item p {
+  margin: 0;
+  color: #796b66;
+  line-height: 1.85;
+}
+
+/* 未來展望 */
+.about-future-section {
+  padding: 105px 24px;
+  background: #fff8f6;
+}
+
+.about-timeline {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.about-timeline-line {
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  left: 22px;
+  width: 2px;
+  background: #d8b2ae;
+}
+
+.about-timeline-item {
+  position: relative;
+  padding-left: 75px;
+  margin-bottom: 32px;
+}
+
+.about-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.about-timeline-point {
+  position: absolute;
+  top: 26px;
+  left: 12px;
+  z-index: 2;
+  width: 22px;
+  height: 22px;
+  border: 5px solid #fff8f6;
+  border-radius: 50%;
+  background: #bd7e80;
+  box-shadow: 0 0 0 2px #d6aaa7;
+}
+
+.about-timeline-card {
+  padding: 29px 32px;
+  border: 1px solid #ead8d4;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.about-timeline-card span {
+  color: #b27476;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.about-timeline-card h3 {
+  margin: 8px 0 12px;
+  color: #594b47;
+  font-family: "Noto Serif TC", serif;
+  font-size: 24px;
+}
+
+.about-timeline-card p {
+  margin: 0;
+  color: #796b66;
+  line-height: 1.85;
+}
+
+/* 結尾 */
+.about-ending {
+  padding: 115px 24px;
+  background:
+    linear-gradient(
+      135deg,
+      #ead8d4,
+      #f5e9e5
+    );
+}
+
+.about-ending-content {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-ending-symbol {
+  margin: 0 0 18px;
+  color: #b87376;
+  font-size: 34px;
+}
+
+.about-ending h2 {
+  margin: 0 0 22px;
+  color: #594b47;
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(29px, 4vw, 43px);
+  line-height: 1.55;
+}
+
+.about-ending-content > p:not(.about-ending-symbol) {
+  margin: 0 auto 30px;
+  color: #756762;
+  font-size: 17px;
+  line-height: 2;
+}
+
+.about-ending-button {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: #b97779;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.about-ending-button:hover {
+  background: #a66568;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 27px rgba(150, 91, 94, 0.22);
+}
+
+/* 平板 */
+@media (max-width: 950px) {
+
+  .about-hero-container,
+  .about-story-layout {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .about-hero-text {
+    text-align: center;
+  }
+
+  .about-hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-hero-visual {
+    min-height: 370px;
+  }
+
+  .about-belief-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-story-content {
+    text-align: center;
+  }
+
+  .about-story-decoration {
+    min-height: 360px;
+  }
+
+}
+
+/* 手機 */
+@media (max-width: 650px) {
+
+  .about-hero {
+    padding: 65px 20px 60px;
+  }
+
+  .about-hero-text h1 {
+    font-size: 36px;
+  }
+
+  .about-hero-text h2 {
+    font-size: 25px;
+  }
+
+  .about-hero-visual {
+    min-height: 310px;
+  }
+
+  .about-hero-circle {
+    width: 285px;
+    height: 285px;
+  }
+
+  .about-hero-card {
+    width: 250px;
+    padding: 42px 25px 35px;
+  }
+
+  .about-cat-icon {
+    font-size: 65px;
+  }
+
+  .about-belief-section,
+  .about-story-section,
+  .about-services-section,
+  .about-features-section,
+  .about-future-section {
+    padding: 75px 20px;
+  }
+
+  .about-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-main-shape {
+    width: 250px;
+    height: 290px;
+  }
+
+  .story-cat {
+    font-size: 85px;
+  }
+
+  .about-feature-item {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .about-feature-number {
+    width: 58px;
+    height: 58px;
+  }
+
+  .about-timeline-item {
+    padding-left: 57px;
+  }
+
+  .about-timeline-line {
+    left: 17px;
+  }
+
+  .about-timeline-point {
+    left: 7px;
+  }
+
+  .about-timeline-card {
+    padding: 25px 22px;
+  }
+
+  .about-ending {
+    padding: 85px 20px;
+  }
+
+}
+
+/* ==================================================
+   住院照護頁面 hospital.html
+================================================== */
+
+/* ---------- 共用容器 ---------- */
+
+.hospital-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.hospital-section-heading {
+  max-width: 780px;
+  margin: 0 auto 58px;
+  text-align: center;
+}
+
+.hospital-section-icon {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 15px;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eaf5fa;
+  font-size: 34px;
+  box-shadow: 0 12px 28px rgba(78, 126, 150, 0.1);
+}
+
+.hospital-section-number {
+  margin: 0 0 9px;
+  color: #6d9db5;
+  font-family: "Noto Serif TC", serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.hospital-section-heading h2 {
+  margin: 0 0 17px;
+  color: #4e5d64;
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.45;
+}
+
+.hospital-section-quote {
+  margin: 0 0 17px;
+  color: #7195a6;
+  font-family: "Noto Serif TC", serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.hospital-section-description {
+  margin: 0;
+  color: #6f7c82;
+  font-size: 16px;
+  line-height: 2;
+}
+
+
+/* ==================================================
+   Hero
+================================================== */
+
+.hospital-hero {
+  position: relative;
+  min-height: 690px;
+  padding: 95px 24px 105px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 88% 20%,
+      rgba(194, 225, 238, 0.75) 0,
+      rgba(194, 225, 238, 0) 31%
+    ),
+    linear-gradient(
+      135deg,
+      #f9fdff 0%,
+      #edf7fb 48%,
+      #e4f0f5 100%
+    );
+}
+
+.hospital-hero-container {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 75px;
+}
+
+.hospital-english-title {
+  margin: 0 0 13px;
+  color: #6f9cb1;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hospital-hero-content h1 {
+  margin: 0 0 14px;
+  color: #46575f;
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.3;
+}
+
+.hospital-hero-content h2 {
+  margin: 0 0 25px;
+  color: #6694aa;
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(25px, 3.1vw, 37px);
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.hospital-hero-description {
+  max-width: 650px;
+  margin: 0 0 15px;
+  color: #67767d;
+  font-size: 17px;
+  line-height: 2;
+}
+
+.hospital-explore-button {
+  width: fit-content;
+  margin-top: 28px;
+  padding: 15px 28px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  background: #6f9fb6;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 13px 28px rgba(87, 139, 163, 0.23);
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.hospital-explore-button:hover {
+  background: #5c8ea6;
+  transform: translateY(-3px);
+  box-shadow: 0 17px 33px rgba(87, 139, 163, 0.29);
+}
+
+.hospital-button-arrow {
+  display: inline-block;
+  font-size: 19px;
+  animation: hospitalArrowMove 1.7s ease-in-out infinite;
+}
+
+@keyframes hospitalArrowMove {
+  0%,
+  100% {
+    transform: translateY(-2px);
+  }
+
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+
+/* Hero 右側圖卡 */
+
+.hospital-hero-visual {
+  position: relative;
+  min-height: 470px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hospital-hero-background-circle {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(181, 219, 235, 0.82),
+      rgba(214, 236, 244, 0.75)
+    );
+}
+
+.hospital-hero-small-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.hospital-hero-small-circle.circle-one {
+  top: 35px;
+  right: 35px;
+  width: 74px;
+  height: 74px;
+  background: #f4deda;
+}
+
+.hospital-hero-small-circle.circle-two {
+  bottom: 45px;
+  left: 18px;
+  width: 104px;
+  height: 104px;
+  background: #e4ecdc;
+}
+
+.hospital-hero-small-circle.circle-three {
+  top: 95px;
+  left: 45px;
+  width: 35px;
+  height: 35px;
+  background: #f2e5bd;
+}
+
+.hospital-illustration-card {
+  position: relative;
+  z-index: 3;
+  width: min(350px, 88%);
+  padding: 30px 34px 42px;
+  border: 1px solid rgba(167, 201, 216, 0.7);
+  border-radius: 38px;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  box-shadow: 0 25px 55px rgba(64, 105, 124, 0.16);
+  backdrop-filter: blur(8px);
+  transform: rotate(2deg);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.hospital-illustration-card:hover {
+  transform: rotate(0deg) translateY(-7px);
+  box-shadow: 0 31px 62px rgba(64, 105, 124, 0.21);
+}
+
+.hospital-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hospital-card-cross {
+  width: 38px;
+  height: 38px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dceff6;
+  color: #5f91aa;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.hospital-card-heart {
+  color: #d29b9c;
+  font-size: 29px;
+}
+
+.hospital-cat-illustration {
+  margin: 22px 0 15px;
+  font-size: 98px;
+  transition: transform 0.3s ease;
+}
+
+.hospital-illustration-card:hover .hospital-cat-illustration {
+  transform: scale(1.06);
+}
+
+.hospital-medical-icons {
+  margin-bottom: 19px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  font-size: 25px;
+}
+
+.hospital-card-label {
+  margin: 0 0 9px;
+  color: #76a1b4;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hospital-card-title {
+  margin: 0;
+  color: #4e5d64;
+  font-family: "Noto Serif TC", serif;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.hospital-hero-wave {
+  position: absolute;
+  right: -5%;
+  bottom: -110px;
+  left: -5%;
+  height: 190px;
+  border-radius: 50% 50% 0 0;
+  background: #ffffff;
+}
+
+
+/* ==================================================
+   不建議探病
+================================================== */
+
+.hospital-visiting-section {
+  padding: 105px 24px;
+  background: #ffffff;
+}
+
+.hospital-visiting-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 27px;
+}
+
+.hospital-visiting-card {
+  position: relative;
+  padding: 37px 30px 34px;
+  border: 1px solid #dfecef;
+  border-radius: 27px;
+  overflow: hidden;
+  background: #fbfeff;
+  box-shadow: 0 14px 36px rgba(67, 103, 118, 0.07);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hospital-visiting-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 6px;
+  background: #9bc2d3;
+}
+
+.hospital-visiting-card:nth-child(2)::before {
+  background: #82aec2;
+}
+
+.hospital-visiting-card:nth-child(3)::before {
+  background: #c8b3d0;
+}
+
+.hospital-visiting-card:hover {
+  transform: translateY(-8px);
+  border-color: #bad3de;
+  box-shadow: 0 23px 47px rgba(67, 103, 118, 0.13);
+}
+
+.hospital-card-icon-wrapper {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 20px;
+  border-radius: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eaf5f8;
+}
+
+.hospital-content-icon {
+  font-size: 36px;
+  transition: transform 0.3s ease;
+}
+
+.hospital-visiting-card:hover .hospital-content-icon {
+  transform: scale(1.12);
+}
+
+.hospital-card-tag {
+  margin: 0 0 8px;
+  color: #7ba4b6;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.hospital-visiting-card h3 {
+  margin: 0 0 16px;
+  color: #4d5d64;
+  font-family: "Noto Serif TC", serif;
+  font-size: 24px;
+}
+
+.hospital-visiting-card > p:not(.hospital-card-tag) {
+  margin: 0 0 13px;
+  color: #6f7c82;
+  line-height: 1.9;
+}
+
+.hospital-visiting-card > p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* 探病提醒 */
+
+.hospital-information-note {
+  max-width: 900px;
+  margin: 46px auto 0;
+  padding: 29px 32px;
+  border: 1px solid #cfe1e8;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  align-items: center;
+  gap: 25px;
+  background:
+    linear-gradient(
+      135deg,
+      #f3fafc,
+      #edf6fa
+    );
+}
+
+.hospital-note-icon {
+  width: 66px;
+  height: 66px;
+  border-radius: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  font-size: 33px;
+  box-shadow: 0 9px 24px rgba(72, 108, 123, 0.09);
+}
+
+.hospital-note-content h3 {
+  margin: 0 0 9px;
+  color: #4f626b;
+  font-family: "Noto Serif TC", serif;
+  font-size: 22px;
+}
+
+.hospital-note-content p {
+  margin: 0;
+  color: #6c7b82;
+  line-height: 1.85;
+}
+
+
+/* ==================================================
+   可以準備什麼
+================================================== */
+
+.hospital-prepare-section {
+  padding: 105px 24px;
+  background:
+    linear-gradient(
+      135deg,
+      #f8faf5 0%,
+      #f4f8f3 50%,
+      #eef5f3 100%
+    );
+}
+
+.hospital-prepare-section .hospital-section-icon {
+  background: #e9f1e4;
+}
+
+.hospital-prepare-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 27px;
+}
+
+.hospital-prepare-card {
+  padding: 32px 29px 30px;
+  border: 1px solid #dde9dc;
+  border-radius: 27px;
+  background: rgba(255, 255, 255, 0.93);
+  box-shadow: 0 14px 36px rgba(81, 107, 79, 0.07);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.hospital-prepare-card:hover {
+  transform: translateY(-8px);
+  border-color: #bfd4bc;
+  box-shadow: 0 22px 45px rgba(81, 107, 79, 0.13);
+}
+
+.hospital-prepare-top {
+  margin-bottom: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hospital-prepare-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #edf4e9;
+  font-size: 36px;
+  transition: transform 0.3s ease;
+}
+
+.hospital-prepare-card:nth-child(2) .hospital-prepare-icon {
+  background: #f2ede2;
+}
+
+.hospital-prepare-card:nth-child(3) .hospital-prepare-icon {
+  background: #e7f2f4;
+}
+
+.hospital-prepare-card:hover .hospital-prepare-icon {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.hospital-prepare-number {
+  color: #a1b89c;
+  font-family: "Noto Serif TC", serif;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.hospital-prepare-card h3 {
+  margin: 0 0 15px;
+  color: #536259;
+  font-family: "Noto Serif TC", serif;
+  font-size: 24px;
+}
+
+.hospital-prepare-card > p {
+  margin: 0 0 22px;
+  color: #6f7c73;
+  line-height: 1.9;
+}
+
+.hospital-prepare-reminder {
+  padding: 14px 16px;
+  border-radius: 15px;
+  background: #f2f6ef;
+  color: #72816f;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* 攜帶前確認 */
+
+.hospital-permission-box {
+  max-width: 940px;
+  margin: 46px auto 0;
+  padding: 32px 35px;
+  border: 1px solid #d5e2d2;
+  border-radius: 27px;
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 25px;
+  background: #ffffff;
+  box-shadow: 0 13px 34px rgba(78, 103, 76, 0.06);
+}
+
+.hospital-permission-symbol {
+  width: 70px;
+  height: 70px;
+  border-radius: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eaf2e6;
+  color: #849d7d;
+  font-size: 33px;
+}
+
+.hospital-permission-box h3 {
+  margin: 0 0 10px;
+  color: #536259;
+  font-family: "Noto Serif TC", serif;
+  font-size: 23px;
+}
+
+.hospital-permission-box p {
+  margin: 0 0 12px;
+  color: #6d7a70;
+  line-height: 1.85;
+}
+
+.hospital-permission-box strong {
+  color: #63805e;
+  line-height: 1.8;
+}
+
+
+/* ==================================================
+   不要做什麼
+================================================== */
+
+.hospital-warning-section {
+  padding: 105px 24px;
+  background:
+    linear-gradient(
+      135deg,
+      #fffafa 0%,
+      #fff5f4 50%,
+      #fdf0ef 100%
+    );
+}
+
+.hospital-warning-section .hospital-section-icon {
+  background: #f8e6e4;
+}
+
+.hospital-warning-section .hospital-section-number {
+  color: #bf7d7d;
+}
+
+.hospital-warning-section .hospital-section-quote {
+  color: #b47c7d;
+}
+
+.hospital-warning-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 27px;
+}
+
+.hospital-warning-card {
+  position: relative;
+  padding: 30px 29px;
+  border: 1px solid #f0d8d5;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 14px 36px rgba(126, 76, 72, 0.07);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hospital-warning-card:hover {
+  transform: translateY(-8px);
+  border-color: #deb9b6;
+  box-shadow: 0 23px 47px rgba(126, 76, 72, 0.13);
+}
+
+.hospital-warning-card-wide {
+  grid-column: 1 / -1;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.hospital-warning-header {
+  margin-bottom: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hospital-warning-symbol {
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d98584;
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 700;
+  box-shadow: 0 7px 17px rgba(184, 101, 101, 0.2);
+}
+
+.hospital-warning-icon {
+  font-size: 38px;
+  transition: transform 0.3s ease;
+}
+
+.hospital-warning-card:hover .hospital-warning-icon {
+  transform: scale(1.1);
+}
+
+.hospital-warning-card h3 {
+  margin: 0 0 15px;
+  color: #684f4f;
+  font-family: "Noto Serif TC", serif;
+  font-size: 23px;
+}
+
+.hospital-warning-card > p {
+  margin: 0 0 14px;
+  color: #786766;
+  line-height: 1.9;
+}
+
+.hospital-warning-reason {
+  padding: 13px 15px;
+  border-left: 4px solid #d89492;
+  border-radius: 0 12px 12px 0;
+  background: #fff3f2;
+  color: #9e6262 !important;
+  font-weight: 600;
+}
+
+
+/* 重要提醒 */
+
+.hospital-important-reminder {
+  max-width: 940px;
+  margin: 47px auto 0;
+  padding: 34px 36px;
+  border: 1px solid #e9c9c5;
+  border-radius: 28px;
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 27px;
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #fff8f7
+    );
+  box-shadow: 0 15px 38px rgba(119, 74, 70, 0.08);
+}
+
+.hospital-important-icon {
+  width: 76px;
+  height: 76px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7e8e5;
+  font-size: 37px;
+}
+
+.hospital-important-label {
+  margin: 0 0 7px;
+  color: #c27e7d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.hospital-important-content h3 {
+  margin: 0 0 11px;
+  color: #684f4f;
+  font-family: "Noto Serif TC", serif;
+  font-size: 24px;
+}
+
+.hospital-important-content > p:not(.hospital-important-label) {
+  margin: 0 0 12px;
+  color: #776665;
+  line-height: 1.85;
+}
+
+.hospital-important-content strong {
+  color: #a45f60;
+  line-height: 1.8;
+}
+
+
+/* ==================================================
+   Ending
+================================================== */
+
+.hospital-ending {
+  position: relative;
+  padding: 120px 24px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.6),
+      transparent 27%
+    ),
+    linear-gradient(
+      135deg,
+      #dcecf3,
+      #eaf3f6 45%,
+      #d9e8ec
+    );
+}
+
+.hospital-ending-content {
+  position: relative;
+  z-index: 2;
+  width: min(760px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hospital-ending-icon {
+  margin: 0 0 14px;
+  font-size: 42px;
+}
+
+.hospital-ending-small-title {
+  margin: 0 0 13px;
+  color: #7399aa;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hospital-ending h2 {
+  margin: 0 0 23px;
+  color: #465961;
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(32px, 4.5vw, 48px);
+  line-height: 1.5;
+}
+
+.hospital-ending-divider {
+  margin: 0 auto 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: #7ba1b2;
+}
+
+.hospital-ending-divider span:first-child,
+.hospital-ending-divider span:last-child {
+  width: 75px;
+  height: 1px;
+  background: #a9c7d3;
+}
+
+.hospital-ending-content > p:not(
+    .hospital-ending-icon,
+    .hospital-ending-small-title
+  ) {
+  margin: 0 auto 12px;
+  color: #61747c;
+  font-size: 17px;
+  line-height: 2;
+}
+
+.hospital-ending-buttons {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.hospital-ending-button {
+  min-width: 150px;
+  padding: 14px 25px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.hospital-ending-button:hover {
+  transform: translateY(-3px);
+}
+
+.hospital-ending-button-primary {
+  background: #6796aa;
+  color: #ffffff;
+  box-shadow: 0 12px 27px rgba(80, 129, 150, 0.23);
+}
+
+.hospital-ending-button-primary:hover {
+  background: #57869a;
+  box-shadow: 0 16px 31px rgba(80, 129, 150, 0.29);
+}
+
+.hospital-ending-button-secondary {
+  border-color: #8bb0bf;
+  background: rgba(255, 255, 255, 0.62);
+  color: #587e8e;
+}
+
+.hospital-ending-button-secondary:hover {
+  background: #ffffff;
+}
+
+.hospital-ending-paw {
+  position: absolute;
+  color: rgba(105, 149, 168, 0.12);
+  font-size: 105px;
+  transform: rotate(-20deg);
+}
+
+.hospital-ending-paw.paw-one {
+  top: 45px;
+  left: 7%;
+}
+
+.hospital-ending-paw.paw-two {
+  right: 7%;
+  bottom: 30px;
+  transform: rotate(20deg);
+}
+
+
+/* ==================================================
+   平板版
+================================================== */
+
+@media (max-width: 1000px) {
+  .hospital-hero-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .hospital-hero-content {
+    text-align: center;
+  }
+
+  .hospital-hero-description {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hospital-explore-button {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hospital-hero-visual {
+    min-height: 400px;
+  }
+
+  .hospital-visiting-grid,
+  .hospital-prepare-grid {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hospital-warning-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hospital-warning-card-wide {
+    grid-column: 1 / -1;
+  }
+}
+
+
+/* ==================================================
+   手機版
+================================================== */
+
+@media (max-width: 700px) {
+  .hospital-container {
+    width: min(100%, calc(100% - 36px));
+  }
+
+  .hospital-hero {
+    min-height: auto;
+    padding: 68px 18px 88px;
+  }
+
+  .hospital-hero-container {
+    gap: 35px;
+  }
+
+  .hospital-english-title {
+    font-size: 12px;
+    letter-spacing: 1.4px;
+  }
+
+  .hospital-hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hospital-hero-content h2 {
+    font-size: 25px;
+  }
+
+  .hospital-hero-description {
+    font-size: 16px;
+    line-height: 1.9;
+  }
+
+  .hospital-hero-visual {
+    min-height: 325px;
+  }
+
+  .hospital-hero-background-circle {
+    width: 285px;
+    height: 285px;
+  }
+
+  .hospital-illustration-card {
+    width: 245px;
+    padding: 24px 25px 32px;
+    border-radius: 30px;
+  }
+
+  .hospital-cat-illustration {
+    font-size: 70px;
+  }
+
+  .hospital-medical-icons {
+    font-size: 21px;
+  }
+
+  .hospital-card-title {
+    font-size: 21px;
+  }
+
+  .hospital-hero-small-circle.circle-one {
+    right: 3px;
+    width: 55px;
+    height: 55px;
+  }
+
+  .hospital-hero-small-circle.circle-two {
+    left: 0;
+    width: 75px;
+    height: 75px;
+  }
+
+  .hospital-visiting-section,
+  .hospital-prepare-section,
+  .hospital-warning-section {
+    padding: 78px 18px;
+  }
+
+  .hospital-section-heading {
+    margin-bottom: 42px;
+  }
+
+  .hospital-section-heading h2 {
+    font-size: 31px;
+  }
+
+  .hospital-section-quote {
+    font-size: 18px;
+  }
+
+  .hospital-visiting-card,
+  .hospital-prepare-card,
+  .hospital-warning-card {
+    padding: 28px 24px;
+  }
+
+  .hospital-information-note,
+  .hospital-permission-box,
+  .hospital-important-reminder {
+    grid-template-columns: 1fr;
+    padding: 27px 24px;
+  }
+
+  .hospital-note-icon,
+  .hospital-permission-symbol,
+  .hospital-important-icon {
+    width: 62px;
+    height: 62px;
+  }
+
+  .hospital-warning-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hospital-warning-card-wide {
+    grid-column: auto;
+  }
+
+  .hospital-ending {
+    padding: 88px 20px;
+  }
+
+  .hospital-ending h2 {
+    font-size: 33px;
+  }
+
+  .hospital-ending-content > p:not(
+      .hospital-ending-icon,
+      .hospital-ending-small-title
+    ) {
+    font-size: 16px;
+  }
+
+  .hospital-ending-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hospital-ending-button {
+    width: min(260px, 100%);
+  }
+
+  .hospital-ending-paw {
+    font-size: 72px;
+  }
+}
+
+
+/* ==================================================
+   小型手機
+================================================== */
+
+@media (max-width: 420px) {
+  .hospital-hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hospital-hero-content h2 {
+    font-size: 22px;
+  }
+
+  .hospital-explore-button {
+    padding: 13px 23px;
+  }
+
+  .hospital-section-heading h2 {
+    font-size: 28px;
+  }
+
+  .hospital-section-icon {
+    width: 61px;
+    height: 61px;
+    font-size: 31px;
+  }
+
+  .hospital-visiting-card h3,
+  .hospital-prepare-card h3,
+  .hospital-warning-card h3 {
+    font-size: 22px;
+  }
+
+  .hospital-information-note,
+  .hospital-permission-box,
+  .hospital-important-reminder {
+    padding: 24px 20px;
+  }
+}
+
+/* ==========================
+   Footer
+========================== */
+
+.site-footer{
+    margin-top:90px;
+    padding:70px 20px 45px;
+    background:#faf7f4;
+    border-top:1px solid #ece5df;
+}
+
+.site-footer-content{
+    max-width:700px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.footer-heart{
+    font-size:28px;
+    color:#d8a8a8;
+    margin-bottom:22px;
+}
+
+.footer-text{
+    margin:0;
+    color:#6f635d;
+    font-family:"Noto Serif TC", serif;
+    font-size:24px;
+    font-weight:500;
+    line-height:1.9;
+}
+
+.footer-copyright{
+    margin-top:34px;
+    color:#a89b95;
+    font-size:14px;
+    letter-spacing:0.6px;
+}
+
+/* ==========================================
+   飲食與罐頭頁面
+========================================== */
+
+.food-page {
+  background: #fffdfb;
+}
+
+/* ==========================
+   Hero
+========================== */
+
+.food-hero {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      135deg,
+      #fffaf4 0%,
+      #fff5e8 100%
+    );
+}
+
+.food-hero-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 70px;
+  padding: 90px 0;
+}
+
+.food-hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+.food-english-title {
+  margin: 0 0 18px;
+  color: #c78457;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+
+.food-hero-text h1 {
+  margin: 0;
+  color: #574a44;
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(42px, 5vw, 66px);
+  line-height: 1.25;
+}
+
+.food-hero-description {
+  margin: 28px 0 0;
+  color: #746660;
+  font-size: 18px;
+  line-height: 2.05;
+}
+
+.food-hero-button {
+  width: fit-content;
+  margin-top: 36px;
+  padding: 14px 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  border-radius: 999px;
+  background: #dc9b68;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 12px 30px rgba(190, 121, 69, 0.2);
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.food-hero-button:hover {
+  transform: translateY(-3px);
+  background: #ca8655;
+  box-shadow: 0 16px 34px rgba(190, 121, 69, 0.28);
+}
+
+.food-hero-image {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.food-hero-circle {
+  position: absolute;
+  width: 410px;
+  height: 410px;
+  border-radius: 50%;
+  background: #f8dfbd;
+  opacity: 0.7;
+}
+
+.food-hero-image::before,
+.food-hero-image::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.food-hero-image::before {
+  top: 25px;
+  right: 30px;
+  width: 90px;
+  height: 90px;
+}
+
+.food-hero-image::after {
+  bottom: 20px;
+  left: 50px;
+  width: 58px;
+  height: 58px;
+}
+
+.food-hero-image img {
+  position: relative;
+  z-index: 1;
+  width: min(430px, 100%);
+  max-height: 430px;
+  object-fit: contain;
+  filter: drop-shadow(0 22px 18px rgba(103, 75, 56, 0.13));
+  animation: foodCatFloat 4s ease-in-out infinite;
+}
+
+@keyframes foodCatFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ==========================
+   共用區塊
+========================== */
+
+.food-section {
+  padding: 100px 24px;
+}
+
+.food-section-heading {
+  max-width: 720px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.food-section-label {
+  margin: 0 0 12px;
+  color: #c98659;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.food-section-heading h2 {
+  margin: 0;
+  color: #584b46;
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(31px, 4vw, 43px);
+  line-height: 1.4;
+}
+
+.food-section-heading > p:last-child {
+  margin: 20px 0 0;
+  color: #7b6d67;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+/* ==========================
+   三種罐頭
+========================== */
+
+.can-type-section {
+  background: #fffdfb;
+}
+
+.can-card-grid {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 25px;
+}
+
+.can-card {
+  padding: 34px 29px 30px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee3da;
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 0 15px 42px rgba(94, 75, 65, 0.07);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.can-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 50px rgba(94, 75, 65, 0.12);
+}
+
+.main-food-card {
+  border-top: 5px solid #dfa06e;
+}
+
+.complementary-card {
+  border-top: 5px solid #e2b46f;
+}
+
+.prescription-card {
+  border-top: 5px solid #82b5b1;
+}
+
+.can-card-icon {
+  width: 58px;
+  height: 58px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: #fff5ea;
+  font-size: 29px;
+}
+
+.complementary-card .can-card-icon {
+  background: #fff7df;
+}
+
+.prescription-card .can-card-icon {
+  background: #eaf6f4;
+}
+
+.can-card-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.can-card-category {
+  display: block;
+  margin-bottom: 5px;
+  color: #b98a68;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+.can-card-title h3 {
+  margin: 0;
+  color: #554943;
+  font-family: "Noto Serif TC", serif;
+  font-size: 28px;
+}
+
+.can-card-tag {
+  flex-shrink: 0;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #fff0e2;
+  color: #b46f3e;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.complementary-card .can-card-tag {
+  background: #fff5d9;
+  color: #a37b31;
+}
+
+.prescription-card .can-card-tag {
+  background: #e5f3f1;
+  color: #508985;
+}
+
+.can-card-intro {
+  margin: 22px 0 0;
+  color: #746661;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.can-card-block {
+  margin-top: 25px;
+}
+
+.can-card-block h4 {
+  margin: 0 0 12px;
+  color: #5f514b;
+  font-size: 16px;
+}
+
+.can-card-block ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.can-card-block li {
+  position: relative;
+  margin-top: 9px;
+  padding-left: 21px;
+  color: #756863;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.can-card-block li::before {
+  content: "✓";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #d5915e;
+  font-weight: 700;
+}
+
+.prescription-card .can-card-block li::before {
+  color: #68a29e;
+}
+
+.can-card-note {
+  margin-top: auto;
+  padding: 17px 18px;
+  border-radius: 16px;
+  background: #fff8f0;
+  color: #826a5a;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.warning-note {
+  background: #eef8f6;
+  color: #567873;
+}
+
+/* ==========================
+   如何挑選
+========================== */
+
+.choose-food-section {
+  background: #faf6f1;
+}
+
+.choose-step-grid {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.choose-step-card {
+  position: relative;
+  padding: 36px 28px 30px;
+  overflow: hidden;
+  border: 1px solid #ebdfd6;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.88);
+  text-align: center;
+  box-shadow: 0 13px 35px rgba(93, 72, 59, 0.06);
+}
+
+.choose-step-number {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  color: #ead8c9;
+  font-family: "Noto Serif TC", serif;
+  font-size: 33px;
+  font-weight: 700;
+}
+
+.choose-step-icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f7dfc8;
+  color: #ad6e40;
+  font-family: "Noto Serif TC", serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.choose-step-card h3 {
+  margin: 0;
+  color: #594c46;
+  font-family: "Noto Serif TC", serif;
+  font-size: 21px;
+}
+
+.choose-step-card > p {
+  margin: 17px 0 0;
+  color: #756762;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.choose-step-card strong {
+  color: #b06c3f;
+}
+
+.choose-example {
+  margin-top: 20px;
+  padding: 14px 15px;
+  border-radius: 14px;
+  background: #fff8f1;
+  color: #8b7161;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* 營養標準說明 */
+
+.nutrition-standard-box {
+  width: min(1080px, 100%);
+  margin: 35px auto 0;
+  padding: 33px 35px;
+  border: 1px solid #eaded4;
+  border-radius: 25px;
+  background: #ffffff;
+}
+
+.nutrition-standard-heading {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.nutrition-standard-heading > span {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: #fff1df;
+  font-size: 25px;
+}
+
+.nutrition-standard-heading h3 {
+  margin: 0;
+  color: #584b45;
+  font-family: "Noto Serif TC", serif;
+  font-size: 23px;
+}
+
+.nutrition-standard-heading p {
+  margin: 6px 0 0;
+  color: #8b7a72;
+  font-size: 14px;
+}
+
+.nutrition-standard-grid {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.nutrition-standard-item {
+  padding: 20px;
+  border-radius: 17px;
+  background: #fcf8f4;
+}
+
+.nutrition-standard-item strong {
+  display: block;
+  margin-bottom: 9px;
+  color: #bd7647;
+  font-size: 18px;
+}
+
+.nutrition-standard-item span {
+  color: #766963;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ==========================
+   常見迷思
+========================== */
+
+.food-myth-section {
+  background: #fffdfb;
+}
+
+.food-myth-grid {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.food-myth-card {
+  padding: 31px 31px 28px;
+  border: 1px solid #eee3db;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 12px 34px rgba(90, 73, 63, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.food-myth-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 19px 42px rgba(90, 73, 63, 0.1);
+}
+
+.food-myth-icon {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 17px;
+  background: #fff4e6;
+  font-size: 25px;
+}
+
+.food-myth-card h3 {
+  margin: 0;
+  color: #594c46;
+  font-family: "Noto Serif TC", serif;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.food-myth-card p {
+  margin: 12px 0 0;
+  color: #776a64;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.food-myth-card .food-myth-answer {
+  margin-top: 18px;
+  color: #bd7345;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* ==========================
+   溫暖結尾
+========================== */
+
+.food-ending-section {
+  padding: 95px 24px;
+  background:
+    linear-gradient(
+      135deg,
+      #fff5e9 0%,
+      #faf0e7 100%
+    );
+}
+
+.food-ending-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.food-ending-heart {
+  display: block;
+  margin-bottom: 18px;
+  color: #d89e82;
+  font-size: 31px;
+}
+
+.food-ending-content h2 {
+  margin: 0;
+  color: #604f47;
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(27px, 4vw, 38px);
+  line-height: 1.7;
+}
+
+.food-ending-content p {
+  margin: 24px 0 0;
+  color: #806e65;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+/* ==========================================
+   簡潔 Footer
+========================================== */
+
+.site-footer {
+  padding: 62px 20px 38px;
+  border-top: 1px solid #ece5df;
+  background: #faf7f4;
+}
+
+.site-footer-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-heart {
+  margin-bottom: 20px;
+  color: #d8a8a8;
+  font-size: 28px;
+}
+
+.footer-text {
+  margin: 0;
+  color: #6f635d;
+  font-family: "Noto Serif TC", serif;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.9;
+}
+
+.footer-copyright {
+  margin: 29px 0 0;
+  color: #a89b95;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   飲食頁 RWD
+========================================== */
+
+@media (max-width: 1000px) {
+  .food-hero-container {
+    grid-template-columns: 1fr 0.8fr;
+    gap: 35px;
+  }
+
+  .food-hero-circle {
+    width: 340px;
+    height: 340px;
+  }
+
+  .can-card-grid {
+    grid-template-columns: 1fr;
+    max-width: 740px;
+  }
+
+  .choose-step-grid {
+    grid-template-columns: 1fr;
+    max-width: 740px;
+  }
+
+  .nutrition-standard-box {
+    max-width: 740px;
+  }
+}
+
+@media (max-width: 800px) {
+  .food-hero {
+    min-height: auto;
+  }
+
+  .food-hero-container {
+    grid-template-columns: 1fr;
+    padding: 75px 0 55px;
+    text-align: center;
+  }
+
+  .food-hero-description br {
+    display: none;
+  }
+
+  .food-hero-button {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .food-hero-image {
+    min-height: 330px;
+  }
+
+  .food-hero-circle {
+    width: 310px;
+    height: 310px;
+  }
+
+  .food-hero-image img {
+    width: min(350px, 90%);
+  }
+
+  .nutrition-standard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .food-myth-grid {
+    grid-template-columns: 1fr;
+    max-width: 740px;
+  }
+}
+
+@media (max-width: 600px) {
+  .food-hero-container {
+    width: min(100%, calc(100% - 36px));
+    padding-top: 60px;
+  }
+
+  .food-hero-text h1 {
+    font-size: 41px;
+  }
+
+  .food-hero-description {
+    font-size: 16px;
+  }
+
+  .food-hero-image {
+    min-height: 280px;
+  }
+
+  .food-hero-circle {
+    width: 255px;
+    height: 255px;
+  }
+
+  .food-section {
+    padding: 75px 18px;
+  }
+
+  .food-section-heading {
+    margin-bottom: 40px;
+  }
+
+  .food-section-heading > p:last-child {
+    font-size: 15px;
+  }
+
+  .food-section-heading br {
+    display: none;
+  }
+
+  .can-card {
+    padding: 27px 22px 24px;
+    border-radius: 22px;
+  }
+
+  .can-card-title {
+    flex-direction: column;
+  }
+
+  .can-card-title h3 {
+    font-size: 25px;
+  }
+
+  .choose-step-card {
+    padding: 34px 22px 25px;
+  }
+
+  .nutrition-standard-box {
+    padding: 27px 21px;
+  }
+
+  .nutrition-standard-heading {
+    align-items: flex-start;
+  }
+
+  .nutrition-standard-heading h3 {
+    font-size: 20px;
+  }
+
+  .food-myth-card {
+    padding: 27px 23px 25px;
+  }
+
+  .food-ending-section {
+    padding: 75px 20px;
+  }
+
+  .site-footer {
+    padding: 52px 20px 34px;
+  }
+
+  .footer-text {
+    font-size: 19px;
+  }
+}
